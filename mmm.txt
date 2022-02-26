@@ -1,0 +1,7 @@
+#reset:
+  background: #f3e7f9;
+
+
+.box:hover{
+    background-color: rgb(242, 234, 250);
+}
