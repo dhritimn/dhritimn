@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Document</title>
+  <style>
+  h1{
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+  }
+  #paad{
+       background-color: Yellow;
+       border-radius: 10px;
+       border: 2px solid black;
+  }
+  input{
+    padding: 14px 10px;
+       border: 2px solid black; 
+  }
+  #puk{
+      border-radius: 5px;
+       border: 2px solid black;  
+       background-color: blue;
+       color: white;
+  }
+  </style>
+  <script lang="JavaScript">
+  function aa(){
+  var a11 = Number(document.getElementById('a11').value);
+ var a12 = Number(document.getElementById('a12').value);
+ var a13 = Number(document.getElementById('a13').value);
+ var a21 = Number(document.getElementById('a21').value);
+ var a22 = Number(document.getElementById('a22').value);
+ var a23 = Number(document.getElementById('a23').value);
+ var a31 = Number(document.getElementById('a31').value);
+ var a32 = Number(document.getElementById('a32').value);
+ var a33 = Number(document.getElementById('a33').value);
+  var b = a11*((a22*a33)-(a23*a32))-a21*((a12*a33)-(a13*a32))+a31*((a12*a23)-(a13*a22));
+  document.write("<b>The determinant of the 3x3 matrix is: </b>",b,"<br>");
+  if (b!=0) {
+   var e = 1/b;
+       var p11 = e*((a22*a33)-(a23*a32));
+       var p12 = -e*((a21*a33)-(a23*a31));
+       var p13 = e*((a21*a32)-(a22*a31));
+       var p21 = -e*((a12*a33)-(a13*a32));
+       var p22 = e*((a11*a33)-(a31*a32));
+       var p23 = -e*((a11*a32)-(a12*a31));
+       var p31 = e*((a12*a23)-(a13*a22));
+       var p32 = -e*((a11*a23)-(a13*a21));
+       var p33 = e*((a11*a22)-(a12*a21));
+    document.write("<h3>The inverse of this matrix is: </h3>");
+    document.write('<div style="border-left: 2px solid black; border-right: 2px solid black; padding: 2px 2px;">');
+    document.write("<b>"+p11+"&nbsp;&nbsp;&nbsp;"+p21+"&nbsp;&nbsp;&nbsp;"+p31+"</b><br>");
+    document.write("<b>"+p12+"&nbsp;&nbsp;&nbsp;"+p22+"&nbsp;&nbsp;&nbsp;"+p32+"</b><br>");
+    document.write("<b>"+p13+"&nbsp;&nbsp;&nbsp;"+p23+"&nbsp;&nbsp;&nbsp;"+p33+"</b><br>");
+    document.write("</div>");
+  }
+  else{
+    document.write("<b> The 3x3 matrix is not inversible</b>");
+  }
+  }
+  </script>
+</head>
+<body><center>
+<h1> DETERMINANT CALCULATOR:</h1>
+<div id="paad">
+<br><br>
+<b>Enter the elements of the matrix:</b>
+ <div>
+  <input id="a11" type="text-area" placeholder="a11"><br>
+  <input id="a12" type="text-area" placeholder="a12"><br>
+  <input id="a13" type="text-area" placeholder="a13"><br>
+  </div><br>
+  <div>
+  <input id="a21" type="text-area" placeholder="a21"><br>
+  <input id="a22" type="text-area" placeholder="a22"><br>
+  <input id="a23" type="text-area" placeholder="a23"><br>
+  </div><br><br>
+  <div>
+  <input id="a31" type="text-area" placeholder="a31"><br>
+  <input id="a32" type="text-area" placeholder="a32"><br>
+  <input id="a33" type="text-area" placeholder="a33"><br>
+  </div>
+    <span id="sp3"></span>
+  <span id="sp1"></span> <span id="sp2"></span>
+  <span id="sp4"></span>
+  <br>
+  <input type="submit" value="Result" onclick="aa()"><br><br>
+  </center>
+  </div>
+</body>
+</html>
