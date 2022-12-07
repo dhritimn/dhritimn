@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Document</title>
+  <style>
+  h1{
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+  }
+  .kok{
+      padding : 2px 2px;
+      border: 2px solid red;
+      margin: 3px 120px;
+      border-radius: 5px:
+  }
+  #paad{
+       background-color: Yellow;
+       border-radius: 10px;
+       border: 2px solid black;
+  }
+  input{
+    border-radius: 5px;
+       border: 2px solid black;  
+  }
+  #puk{
+      border-radius: 5px;
+       border: 2px solid black;  
+       background-color: blue;
+       color: white;
+       display: none;
+  }
+  </style>
+  <script lang="JavaScript">
+  function aa(){
+   document.getElementById("puk").style.display = "block";
+  var a = Number(document.getElementById('pss1').value);
+  var b = 
+Number(document.getElementById('pss2').value);
+    var c = Number(document.getElementById('pss3').value);
+      var d = Number(document.getElementById('pss4').value);
+        var e = a+b+c+d;
+        var f = Math.round(e*100/15);
+        document.getElementById("ts").innerHTML = "<b>You studied:</b>";
+        document.getElementById("tt").innerHTML= e;
+        document.getElementById("tt2").innerHTML= "<br><b> hours</b><br>";
+        document.getElementById("tt3").innerHTML= f;
+        document.getElementById("tt31").innerHTML= "%";
+ document.getElementById("tt4").innerHTML=" completed for studying 15 hours";
+         }
+  </script>
+</head>
+<body><center>
+<h1> STUDY TIME CALCULATOR</h1>
+<div id="paad">
+<br><br>
+<b>Class hours</b><br>
+  <input id="pss1" type="text-area" placeholder="Enter your age"><br><br>
+  <b>Self revise hours</b><br>
+  <input id="pss2" type="text-area" placeholder="Enter your age"><br><br>
+  <b>questions hours</b><br>
+  <input id="pss3" type="text-area" placeholder="Enter your age"><br><br>
+  <b>test hours</b><br>
+  <input id="pss4" type="text-area" placeholder="Enter your age"><br><br>
+  
+  <input type="submit" value="Result" onclick="aa()"><br><br></div><br><br><div id="puk"><br>
+  <span id="ts"></span><h3>
+  <span id="tt"></span></h3>
+  <span id="tt2"></span><br><br>
+  <h3>
+  <div class="kok">
+  <span id="tt3"></span>
+  <span id="tt31"></span></div></h3>
+   <span id="tt4"></span><br><br>
+  </center>
+  </div>
+</body>
+</html>
